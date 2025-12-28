@@ -1,0 +1,88 @@
+[gd_scene load_steps=5 format=3 uid="uid://sa31imhswus8"]
+
+[ext_resource type="FontFile" uid="uid://jkdrw877iq85" path="res://Assets/fonts/PixelOperator8.ttf" id="1_28flt"]
+[ext_resource type="Script" uid="uid://djv7oqctl84ns" path="res://Scripts/main_menu.gd" id="1_48xlc"]
+[ext_resource type="Texture2D" uid="uid://c6x60tumq8ntg" path="res://Assets/Adventure Map, Pixel Game, Green.jpg" id="2_1ehe0"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ce3w2"]
+texture = ExtResource("2_1ehe0")
+modulate_color = Color(0.30692267, 0.3069227, 0.30692264, 1)
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 17.0
+offset_top = 5.0
+offset_right = 17.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_48xlc")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_ce3w2")
+
+[node name="Start" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -144.0
+offset_top = -47.5
+offset_right = 144.0
+offset_bottom = 47.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_28flt")
+theme_override_font_sizes/font_size = 24
+text = "Start Game"
+
+[node name="Quit" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -144.0
+offset_top = 62.0
+offset_right = 144.0
+offset_bottom = 157.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_28flt")
+theme_override_font_sizes/font_size = 24
+text = "Quit"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -65.0
+offset_top = -136.0
+offset_right = 65.0
+offset_bottom = -113.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 0.80784315, 0.2627451, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_28flt")
+theme_override_font_sizes/font_size = 32
+text = "Knight Mountain"
+
+[connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_start_pressed"]
