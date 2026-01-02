@@ -221,6 +221,7 @@ _data = {
 distance = 5.0
 
 [node name="Game" type="Node2D"]
+position = Vector2(220, 21)
 script = ExtResource("1_h4fw4")
 
 [node name="Level 1" type="Node2D" parent="."]
@@ -230,11 +231,10 @@ unique_name_in_owner = true
 script = ExtResource("1_v158k")
 
 [node name="ScoreLabel" type="Label" parent="Level 1/GameManager"]
-visible = false
-offset_left = 106.0
-offset_top = -281.0
-offset_right = 302.0
-offset_bottom = -227.0
+offset_left = 327.0
+offset_top = -263.0
+offset_right = 523.0
+offset_bottom = -209.0
 scale = Vector2(0.6476419, 0.6276683)
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("7_1l0tm")
